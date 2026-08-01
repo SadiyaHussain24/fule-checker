@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fuel Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <h2>⛽ Smart Fuel Checker</h2>
+        <p class="subtitle">Calculate your trip cost and distance instantly</p>
+
+        <div class="form-group">
+            <label for="distance">Distance to Travel (km):</label>
+            <input type="number" id="distance" placeholder="e.g., 150" min="0">
+        </div>
+
+        <div class="form-group">
+            <label for="mileage">Vehicle Mileage (km per liter):</label>
+            <input type="number" id="mileage" placeholder="e.g., 15" min="1">
+        </div>
+
+        <div class="form-group">
+            <label for="price">Fuel Price (per liter):</label>
+            <input type="number" id="price" placeholder="e.g., 270" min="1">
+        </div>
+
+        <button onclick="calculateFuel()">Calculate Info</button>
+
+        <div class="results" id="resultsBox">
+            <div class="result-item">
+                <span>Required Fuel:</span>
+                <strong id="fuelNeeded">0 L</strong>
+            </div>
+            <div class="result-item">
+                <span>Estimated Cost:</span>
+                <strong id="totalCost">Rs. 0</strong>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
